@@ -3,12 +3,10 @@ import { render } from '@testing-library/react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
 
-export interface Options {
-  router?: {
-    initialRoute?: string;
-    path?: string;
-    extraRoutes?: ReactNode;
-  };
+export interface RouterOptions {
+  initialRoute?: string;
+  path?: string;
+  extraRoutes?: ReactNode;
 }
 
 class Renderer {
@@ -22,7 +20,7 @@ class Renderer {
     initialRoute = '/',
     path = '/',
     extraRoutes = null,
-  }: Options['router'] = {}) {
+  }: RouterOptions = {}) {
     this.result = (
       <MemoryRouter initialEntries={[initialRoute]}>
         <Routes>
