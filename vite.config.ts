@@ -21,7 +21,7 @@ export default defineConfig({
     coverage: {
       exclude: [
         'commitlint.config.ts',
-        'src/*.ts?(s)x',
+        'src/{App,main,vite-env.d}.ts?(s)x',
         'src/{assets,router,styles,tests,types}/**',
         ...coverageConfigDefaults.exclude,
       ],
