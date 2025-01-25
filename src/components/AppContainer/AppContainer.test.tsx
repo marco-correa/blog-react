@@ -1,9 +1,9 @@
 import { renderer } from '@/tests/utils';
-import { Navbar } from './Navbar';
+import { AppContainer } from './AppContainer';
 
 const setup = () => {
   return {
-    ...renderer(<Navbar />)
+    ...renderer(<AppContainer />)
       .withRouter()
       .render(),
   };

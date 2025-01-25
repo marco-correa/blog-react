@@ -1,10 +1,9 @@
 import { createBrowserRouter } from 'react-router-dom';
-
 import { AppContainer } from '@/components/AppContainer';
 import { AppRoutes } from './AppRoutes';
 import { Home } from '@/pages/Home';
-import { NotFound } from '@/pages/NotFound';
 import { postRoutes } from './routes';
+import { NotFound } from '@/pages/NotFound';
 
 export const router = createBrowserRouter([
   {
