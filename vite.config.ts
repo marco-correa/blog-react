@@ -20,9 +20,8 @@ export default defineConfig({
     coverage: {
       exclude: [
         'commitlint.config.ts',
-        'backend/**',
         'src/*.ts?(s)x',
-        'src/{router,styles,store,tests,types}/**',
+        'src/{router,styles,tests,types}/**',
         ...coverageConfigDefaults.exclude,
       ],
     },
