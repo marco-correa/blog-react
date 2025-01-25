@@ -20,7 +20,7 @@ export default defineConfig({
     clearMocks: true,
     coverage: {
       exclude: [
-        'commitlint.config.ts',
+        'commitlint.config.js',
         'src/{App,main,vite-env.d}.ts?(s)x',
         'src/{assets,router,styles,tests,types}/**',
         ...coverageConfigDefaults.exclude,
