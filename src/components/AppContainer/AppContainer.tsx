@@ -1,8 +1,11 @@
-import { AppRoutes } from '@/router';
 import { Link, Outlet } from 'react-router-dom';
+import { AppRoutes } from '@/router';
+import { Content } from './AppContainer.styles';
+import { Navbar } from '../Navbar';
 
 export const AppContainer = () => (
   <>
+    <Navbar />
     <nav>
       <div>
         <Link to={AppRoutes.Home}>Home</Link>
@@ -15,8 +18,8 @@ export const AppContainer = () => (
       </div>
     </nav>
 
-    <br />
-
-    <Outlet />
+    <Content>
+      <Outlet />
+    </Content>
   </>
 );

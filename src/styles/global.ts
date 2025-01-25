@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import normalize from 'styled-normalize';
+import { Colors } from './tokens';
 
 export const GlobalStyle = createGlobalStyle`
   ${normalize}
@@ -7,6 +8,7 @@ export const GlobalStyle = createGlobalStyle`
   html {
     font-size: 16px;
     font-family: "Lato", serif;
+    background-color: ${Colors.NeutralLightest};
   }
 
   * {
