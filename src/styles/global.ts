@@ -5,7 +5,7 @@ export const GlobalStyle = createGlobalStyle`
   ${normalize}
   
   html {
-    font-size: 10px;
+    font-size: 16px;
     font-family: "Lato", serif;
   }
 
