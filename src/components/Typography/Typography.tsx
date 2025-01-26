@@ -7,12 +7,12 @@ import {
 } from './Typography.types';
 
 const elementTypeMapping = {
-  heading1: 'h1',
-  heading2: 'h2',
-  heading3: 'h3',
-  bodyLarge: 'p',
-  bodyLargeBold: 'p',
-  bodySmall: 'p',
+  ['heading-1']: 'h1',
+  ['heading-2']: 'h2',
+  ['heading-3']: 'h3',
+  ['body-large']: 'p',
+  ['body-large-bold']: 'p',
+  ['body-small']: 'p',
   caption: 'label',
 };
 
@@ -26,7 +26,7 @@ interface TypographyProps {
 }
 
 export const Typography: React.FC<TypographyProps> = ({
-  variant = 'bodyLarge',
+  variant = 'body-large',
   color = Colors.PrimaryDark,
   children,
 }) => {

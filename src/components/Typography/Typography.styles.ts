@@ -1,6 +1,7 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { FontSizes, FontWeights, LineHeights, Spacings } from '@/styles/tokens';
 import { TypographyProps } from './Typography.types';
+import { breakpoints } from '@/styles';
 
 interface AnatomyProps {
   $variant: TypographyProps['variant'];
@@ -9,48 +10,95 @@ interface AnatomyProps {
 
 export const Anatomy = styled.p<AnatomyProps>`
   margin: ${Spacings.None};
-
   color: ${({ $color }) => $color};
 
-  font-size: ${({ $variant }) => variantsMapping[$variant].fontSize};
-  line-height: ${({ $variant }) => variantsMapping[$variant].lineHeight};
   font-weight: ${({ $variant }) => variantsMapping[$variant].fontWeight};
+  line-height: ${({ $variant }) => variantsMapping[$variant].lineHeight};
+  font-size: ${({ $variant }) => variantsMapping[$variant].mobile.fontSize};
+
+  ${breakpoints.md} {
+    font-size: ${({ $variant }) => variantsMapping[$variant].desktop.fontSize};
+  }
+
+  ${({ $variant }) =>
+    variantsMapping[$variant].bold &&
+    css`
+      strong {
+        font-weight: ${variantsMapping[$variant].bold};
+      }
+    `}
 `;
 
-const variantsMapping = {
-  heading1: {
-    fontSize: FontSizes.Heading1,
-    lineHeight: LineHeights.Default,
+interface VariantsMapping {
+  [key: string]: {
+    fontWeight: string;
+    lineHeight: string;
+    bold?: string;
+    mobile: { fontSize: string };
+    desktop: { fontSize: string };
+  };
+}
+
+const variantsMapping: VariantsMapping = {
+  ['heading-1']: {
     fontWeight: FontWeights.Bold,
-  },
-  heading2: {
-    fontSize: FontSizes.Heading2,
     lineHeight: LineHeights.Default,
-    fontWeight: FontWeights.Bold,
+    mobile: {
+      fontSize: FontSizes.Heading3,
+    },
+    desktop: {
+      fontSize: FontSizes.Heading1,
+    },
   },
-  heading3: {
-    fontSize: FontSizes.Heading3,
+  ['heading-2']: {
+    fontWeight: FontWeights.Bold,
     lineHeight: LineHeights.Default,
-    fontWeight: FontWeights.Bold,
+    mobile: {
+      fontSize: FontSizes.Heading3,
+    },
+    desktop: {
+      fontSize: FontSizes.Heading2,
+    },
   },
-  bodyLarge: {
-    fontSize: FontSizes.BodyLarge,
-    lineHeight: LineHeights.Large,
+  ['heading-3']: {
+    fontWeight: FontWeights.Bold,
+    lineHeight: LineHeights.Default,
+    mobile: {
+      fontSize: FontSizes.Heading3,
+    },
+    desktop: {
+      fontSize: FontSizes.Heading3,
+    },
+  },
+  ['body-large']: {
     fontWeight: FontWeights.Regular,
-  },
-  bodyLargeBold: {
-    fontSize: FontSizes.BodyLarge,
+    bold: FontWeights.Semibold,
     lineHeight: LineHeights.Large,
-    fontWeight: FontWeights.Semibold,
+    mobile: {
+      fontSize: FontSizes.BodySmall,
+    },
+    desktop: {
+      fontSize: FontSizes.BodyLarge,
+    },
   },
-  bodySmall: {
-    fontSize: FontSizes.BodySmall,
-    lineHeight: LineHeights.Large,
+  ['body-small']: {
     fontWeight: FontWeights.Regular,
+    lineHeight: LineHeights.Large,
+    mobile: {
+      fontSize: FontSizes.BodySmall,
+    },
+    desktop: {
+      fontSize: FontSizes.BodySmall,
+    },
   },
   caption: {
-    fontSize: FontSizes.Caption,
-    lineHeight: LineHeights.Default,
     fontWeight: FontWeights.Regular,
+    lineHeight: LineHeights.Default,
+    mobile: {
+      fontSize: FontSizes.Caption,
+    },
+    desktop: {
+      fontSize: FontSizes.Caption,
+    },
   },
 };

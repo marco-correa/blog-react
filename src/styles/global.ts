@@ -7,7 +7,7 @@ export const GlobalStyle = createGlobalStyle`
   
   html {
     font-size: 16px;
-    font-family: "Lato", serif;
+    font-family: "Open Sans", serif;
     background-color: ${Colors.NeutralLightest};
   }
 

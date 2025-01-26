@@ -10,10 +10,10 @@ export const Navbar = () => {
         <Logo />
       </Link>
 
-      {/* TO DO */}
+      {/* TO DO
       <div
         style={{ backgroundColor: 'gray', height: '56px', width: '400px' }}
-      />
+      /> */}
     </Header>
   );
 };

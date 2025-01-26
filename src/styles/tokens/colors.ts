@@ -18,4 +18,6 @@ export enum Colors {
   AccentLight = '#00BFC1',
   AccentMedium = '#009598',
   AccentDark = '#006C6E',
+
+  None = 'transparent',
 }
