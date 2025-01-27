@@ -19,8 +19,8 @@
 Due to time constraints, some features were not implemented or were partially implemented:
 
 - Search input and sort selector were not implemented;
-- Category and author dropdowns filters were not implemented on the mobile version, only on desktop version;
-- HTTP state for the filters were not implemeted, so the filters were stored only on Redux in this version;
+- Category and author dropdowns filters were not implemented on the mobile version, only on the desktop;
+- HTTP state as query params for the filters were not implemeted, so the filters were stored only on Redux in this version;
 - Integrations tests on home and post pages were not implemented, only unit tests on other several components.
 
 # Technical choices
@@ -28,7 +28,7 @@ Due to time constraints, some features were not implemented or were partially im
 - `typescript`, `styled-components`, `vite`, `vitest`, `testing library`, `date-fns` and `react router v6`
 - `axios` and `react query` to deal with the resquests
 - `redux toolkit` to store the categories and authors filters
-- `msw` to deal wht the mock services on tests
+- `msw` to deal with the mock services on tests
 
 # Tests coverage
 
