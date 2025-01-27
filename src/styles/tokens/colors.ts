@@ -20,4 +20,5 @@ export enum Colors {
   AccentDark = '#006C6E',
 
   None = 'transparent',
+  Inherit = 'inherit',
 }

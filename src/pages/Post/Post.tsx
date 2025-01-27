@@ -14,12 +14,12 @@ import {
   Wrapper,
 } from './Post.styles';
 import { Typography } from '@/components/Typography';
-import Loading from '@/assets/spinner.svg';
 import { Colors } from '@/styles/tokens';
 import { PostsList } from '@/components/PostsList';
+import { Loading } from '@/components/Loading';
 
 export const Post = () => {
-  const { isPending, post, handleBackButton } = usePostPage();
+  const { isPending, post, posts, handleBackButton } = usePostPage();
 
   if (isPending) {
     return <Loading />;
@@ -68,7 +68,7 @@ export const Post = () => {
         <ListWrapper>
           <Typography variant="heading-2">Latest articles</Typography>
 
-          <PostsList max={3} />
+          <PostsList posts={posts} />
         </ListWrapper>
       </Content>
     </Container>

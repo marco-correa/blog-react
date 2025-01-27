@@ -4,9 +4,11 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  display: flex;
   border-radius: 16px;
   overflow: hidden;
   cursor: pointer;
+  border: 1px solid ${Colors.NeutralExtraLight};
 
   grid-column: span 12;
 
@@ -22,11 +24,14 @@ export const Container = styled.div`
 export const LinkStyled = styled(Link)`
   text-decoration: inherit;
   color: inherit;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const Wrapper = styled.div`
   background-color: ${Colors.NeutralLightest};
   display: flex;
+  flex: 1;
   flex-direction: column;
   gap: ${Spacings.Normal};
   padding: ${Spacings.Normal};

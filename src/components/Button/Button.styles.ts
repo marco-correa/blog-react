@@ -17,6 +17,7 @@ export const Anatomy = styled.button<AnatomyProps>`
   cursor: pointer;
   border-radius: 42px;
   display: flex;
+  justify-content: center;
   align-items: center;
   font-weight: ${FontWeights.Semibold};
 

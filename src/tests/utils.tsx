@@ -2,6 +2,7 @@ import { ReactNode } from 'react';
 import { render } from '@testing-library/react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
+import { Provider } from 'react-redux';
 
 export interface RouterOptions {
   initialRoute?: string;
@@ -43,6 +44,13 @@ class Renderer {
         {this.result}
       </QueryClientProvider>
     );
+
+    return this;
+  }
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  withStore(store: any) {
+    this.result = <Provider store={store}>{this.result}</Provider>;
 
     return this;
   }

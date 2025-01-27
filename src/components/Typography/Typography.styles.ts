@@ -11,6 +11,7 @@ interface AnatomyProps {
 export const Anatomy = styled.p<AnatomyProps>`
   margin: ${Spacings.None};
   color: ${({ $color }) => $color};
+  cursor: inherit;
 
   font-weight: ${({ $variant }) => variantsMapping[$variant].fontWeight};
   line-height: ${({ $variant }) => variantsMapping[$variant].lineHeight};

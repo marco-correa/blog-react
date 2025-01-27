@@ -1,13 +1,14 @@
-import { breakpoints } from '@/styles';
 import { Spacings } from '@/styles/tokens';
 import styled from 'styled-components';
 
 export const Container = styled.div`
   display: grid;
-  align-content: space-between;
   grid-gap: ${Spacings.Big};
+  grid-template-areas:
+    'header header'
+    'filters list';
+`;
 
-  ${breakpoints.md} {
-    grid-template-columns: repeat(12, minmax(auto, 1fr));
-  }
+export const HeaderWrapper = styled.div`
+  grid-column: span 2;
 `;
