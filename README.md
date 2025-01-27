@@ -1,13 +1,17 @@
 # How to use it
 
 `npm start` to run the project
+
 `npm test` to run all the tests
+
 `npm run test:ui` to run the tests with Vitest UI with coverage
 
 # App routes
 
 `/` to show the home page
+
 `/posts/:postId` to show one post with its own content
+
 `/*` for any other route, it will show the `404` not found page. Example: `/abc`, `/not-found`, etc
 
 # Features not implmented
@@ -25,3 +29,9 @@ Due to time constraints, some features were not implemented or were partially im
 - `axios` and `react query` to deal with the resquests
 - `redux toolkit` to store the categories and authors filters
 - `msw` to deal wht the mock services on tests
+
+# Tests coverage
+
+Coverage running `npm run test:ui`
+
+![image](https://github.com/marco-correa/blog-react/blob/main/doc/coverage.jpg)
