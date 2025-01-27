@@ -10,7 +10,7 @@
 
 `/` to show the home page
 
-`/posts/:postId` to show one post with its own content
+`/post/:postId` to show one post with its own content
 
 `/*` for any other route, it will show the `404` not found page. Example: `/abc`, `/not-found`, etc
 
