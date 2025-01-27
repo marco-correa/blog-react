@@ -4,7 +4,7 @@
 
 `npm test` to run all the tests
 
-`npm run test:ui` to run the tests with Vitest UI with coverage
+`npm run test:ui` to run the tests with Vitest UI and coverage
 
 # App routes
 
@@ -12,7 +12,7 @@
 
 `/post/:postId` to show one post with its own content
 
-`/*` for any other route, it will show the `404` not found page. Example: `/abc`, `/not-found`, etc
+`/*` on any other route, it will show the `404` not found page. Example: `/abc`, `/not-found`, etc
 
 # Features not implmented
 
