@@ -21,7 +21,8 @@ Due to time constraints, some features were not implemented or were partially im
 - Search input and sort selector were not implemented;
 - Category and author dropdowns filters were not implemented on the mobile version, only on the desktop;
 - HTTP state as query params for the filters were not implemeted, so the filters were stored only on Redux in this version;
-- Integrations tests on home and post pages were not implemented, only unit tests on other several components.
+- Integrations tests on home and post pages were not implemented, only unit tests on other several components;
+- Empty state when the list with the filters used does not return a single item.
 
 # Technical choices
 
